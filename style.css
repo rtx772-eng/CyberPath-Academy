@@ -1,0 +1,101 @@
+:root {
+    --bg: #0a0b10;
+    --card-bg: #151921;
+    --primary: #00f2ff; /* Cyber Cyan */
+    --accent: #bc00ff;  /* Purple */
+    --text: #e0e0e0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: rgba(10, 11, 16, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--primary); }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.terminal-window {
+    background: #000;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: 20px auto;
+    border: 1px solid #333;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-header { padding: 10px; background: #1a1a1a; display: flex; gap: 5px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+.terminal-body { padding: 15px; font-size: 0.9rem; }
+.highlight { color: var(--primary); }
+
+/* Roadmap Cards */
+.roadmap { padding: 50px 10%; }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+.card i { font-size: 2rem; color: var(--primary); margin-bottom: 15px; }
+
+.cta-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+}
